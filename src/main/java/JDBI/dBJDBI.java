@@ -86,7 +86,7 @@ public class dBJDBI {
     public List<BoerderijAanbod> getBoerderijAanbod(){
         ArrayList<BoerderijAanbod> boerderijen ;
         boerderijen = (ArrayList<BoerderijAanbod>) jdbi.withHandle(handle -> {
-            return handle.createQuery("SELECT Pakket.grootte,Pakket.kinderen,Pakket.volwassenen,Boerderij.naam,Biedt_aan.prijs \n" +
+            return handle.createQuery("SELECT Pakket.pakket_id,Pakket.grootte,Pakket.kinderen,Pakket.volwassenen,Boerderij.naam,Biedt_aan.prijs \n" +
                     "from Pakket,Boerderij,Biedt_aan\n" +
                     "where Pakket.pakket_id = Biedt_aan.pakket_id \n" +
                     "and Boerderij.boerderij_id = Biedt_aan.boerderij_id \n" +
