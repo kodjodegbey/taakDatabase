@@ -1,29 +1,28 @@
 package Classes;
 
-import java.util.ArrayList;
-
 public class Klant {
-    private String rijksregister,gsmNr,naam,voornaam,straat;
+    private String rijksregister, gsm_nummer,naam,voornaam,straat;
     private int postcode,nummer,week;
-    private boolean pakket_afgehaal;
+    private boolean afgehaal;
     private int contract_id ;
-    private ArrayList<String> emails;
+    private String email;
 
     public Klant() {
     }
 
-    public Klant(String rijksregister, String gsmNr, String naam, String voornaam, String straat, int postcode, int nummer, int week, boolean pakket_afgehaal, int contract_id, ArrayList<String> emails) {
+    public Klant(String rijksregister, String gsm_nummer, String naam, String voornaam, String straat,
+                 int postcode, int nummer, int week, boolean afgehaal, int contract_id, String email) {
         this.rijksregister = rijksregister;
-        this.gsmNr = gsmNr;
+        this.gsm_nummer = gsm_nummer;
         this.naam = naam;
         this.voornaam = voornaam;
         this.straat = straat;
         this.postcode = postcode;
         this.nummer = nummer;
         this.week = week;
-        this.pakket_afgehaal = pakket_afgehaal;
+        this.afgehaal = afgehaal;
         this.contract_id = contract_id;
-        this.emails = emails;
+        this.email = email;
     }
 
     public String getRijksregister() {
@@ -34,12 +33,12 @@ public class Klant {
         this.rijksregister = rijksregister;
     }
 
-    public String getGsmNr() {
-        return gsmNr;
+    public String getGsm_nummer() {
+        return gsm_nummer;
     }
 
-    public void setGsmNr(String gsmNr) {
-        this.gsmNr = gsmNr;
+    public void setGsm_nummer(String gsm_nummer) {
+        this.gsm_nummer = gsm_nummer;
     }
 
     public String getNaam() {
@@ -90,20 +89,20 @@ public class Klant {
         this.week = week;
     }
 
-    public ArrayList<String> getEmails() {
-        return emails;
+    public String getEmails() {
+        return email;
     }
 
-    public void setEmails(ArrayList<String> emails) {
-        this.emails = emails;
+    public void setEmails(String email) {
+        this.email = email;
     }
 
-    public boolean isPakket_afgehaal() {
-        return pakket_afgehaal;
+    public boolean isAfgehaal() {
+        return afgehaal;
     }
 
-    public void setPakket_afgehaal(boolean pakket_afgehaal) {
-        this.pakket_afgehaal = pakket_afgehaal;
+    public void setAfgehaal(boolean afgehaal) {
+        this.afgehaal = afgehaal;
     }
 
     public int getContract_id() {
@@ -118,15 +117,16 @@ public class Klant {
     public String toString() {
         return "Klant{" +
                 "rijksregister='" + rijksregister + '\'' +
-                ", gsmNr='" + gsmNr + '\'' +
+                ", gsm_nummer='" + gsm_nummer + '\'' +
                 ", naam='" + naam + '\'' +
                 ", voornaam='" + voornaam + '\'' +
                 ", straat='" + straat + '\'' +
                 ", postcode=" + postcode +
                 ", nummer=" + nummer +
                 ", week=" + week +
-                ", pakket_afgehaal=" + pakket_afgehaal +
+                ", afgehaal=" + afgehaal +
                 ", contract_id=" + contract_id +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

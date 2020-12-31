@@ -1,13 +1,13 @@
 package Classes;
 
-public class Prouct {
+public class Product {
     private String naam;
     private boolean inbegrepen;
 
-    public Prouct() {
+    public Product() {
     }
 
-    public Prouct(String naam, boolean inbegrepen) {
+    public Product(String naam, boolean inbegrepen) {
         this.naam = naam;
         this.inbegrepen = inbegrepen;
     }

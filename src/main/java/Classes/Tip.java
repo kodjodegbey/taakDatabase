@@ -1,33 +1,37 @@
 package Classes;
 
+import java.sql.Blob;
+
 public class Tip {
 
-    private String naamProduct,text;
+    private String naam, tekst;
     private int tip_id;
+    private Blob bijlage;
 
     public Tip() {
     }
 
-    public Tip(String naamProduct, String text, int tip_id) {
-        this.naamProduct = naamProduct;
-        this.text = text;
+    public Tip(String naam, String tekst, int tip_id, Blob bijlage) {
+        this.naam = naam;
+        this.tekst = tekst;
         this.tip_id = tip_id;
+        this.bijlage = bijlage;
     }
 
-    public String getNaamProduct() {
-        return naamProduct;
+    public String getNaam() {
+        return naam;
     }
 
-    public void setNaamProduct(String naamProduct) {
-        this.naamProduct = naamProduct;
+    public void setNaam(String naam) {
+        this.naam = naam;
     }
 
-    public String getText() {
-        return text;
+    public String getTekst() {
+        return tekst;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setTekst(String tekst) {
+        this.tekst = tekst;
     }
 
     public int getTip_id() {
@@ -38,12 +42,20 @@ public class Tip {
         this.tip_id = tip_id;
     }
 
+    public Blob getBijlage() {
+        return bijlage;
+    }
+
+    public void setBijlage(Blob bijlage) {
+        this.bijlage = bijlage;
+    }
+
     @Override
     public String toString() {
         return "Tip{" +
-                "naamProduct='" + naamProduct + '\'' +
-                ", text='" + text + '\'' +
-                ", tip_id=" + tip_id +
+                "naam='" + naam + '\'' +
+                ", text='" + tekst + '\'' +
+                ", bijlage=" + bijlage +
                 '}';
     }
 }

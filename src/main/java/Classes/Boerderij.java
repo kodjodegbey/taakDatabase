@@ -1,34 +1,32 @@
 package Classes;
 
-import java.util.ArrayList;
-
 public class Boerderij {
 
     private String naam,straat;
     private  int nummer,postcode,boerderij_id;
-    private ArrayList<String> emails;
+    private String email;
 
 
     public Boerderij(){
 
     }
 
-    public Boerderij(int boerderij_id,String naam, String straat, int nummer, int postcode,ArrayList<String> emails) {
+    public Boerderij(int boerderij_id,String naam, String straat, int nummer, int postcode,String email) {
         this.naam = naam;
         this.straat = straat;
         this.nummer = nummer;
         this.postcode = postcode;
-        this.emails = emails;
+        this.email = email;
         this.boerderij_id=boerderij_id;
     }
 
 
-    public ArrayList<String> getEmails() {
-        return emails;
+    public String getEmails() {
+        return email;
     }
 
-    public void setEmails(ArrayList<String> emails) {
-        this.emails = emails;
+    public void setEmails(String emails) {
+        this.email = emails;
     }
 
 
@@ -79,7 +77,7 @@ public class Boerderij {
                 ", straat='" + straat + '\'' +
                 ", nummer=" + nummer +
                 ", postcode=" + postcode +
-                ", emails=" + emails +
+                ", email=" + email +
                 '}';
     }
 }

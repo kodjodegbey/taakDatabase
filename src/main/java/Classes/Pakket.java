@@ -1,16 +1,16 @@
 package Classes;
 
 public class Pakket {
-    private int pakket_id,kind,volwassen;
+    private int pakket_id, kinderen, volwassenen;
     private String grootte;
 
     public Pakket() {
     }
 
-    public Pakket(int pakket_id, int kind, int volwassen, String grootte) {
+    public Pakket(int pakket_id, int kinderen, int volwassenen, String grootte) {
         this.pakket_id = pakket_id;
-        this.kind = kind;
-        this.volwassen = volwassen;
+        this.kinderen = kinderen;
+        this.volwassenen = volwassenen;
         this.grootte = grootte;
     }
 
@@ -22,20 +22,20 @@ public class Pakket {
         this.pakket_id = pakket_id;
     }
 
-    public int getKind() {
-        return kind;
+    public int getKinderen() {
+        return kinderen;
     }
 
-    public void setKind(int kind) {
-        this.kind = kind;
+    public void setKinderen(int kinderen) {
+        this.kinderen = kinderen;
     }
 
-    public int getVolwassen() {
-        return volwassen;
+    public int getVolwassenen() {
+        return volwassenen;
     }
 
-    public void setVolwassen(int volwassen) {
-        this.volwassen = volwassen;
+    public void setVolwassenen(int volwassenen) {
+        this.volwassenen = volwassenen;
     }
 
     public String getGrootte() {
@@ -50,8 +50,8 @@ public class Pakket {
     public String toString() {
         return "Pakket{" +
                 "pakket_id=" + pakket_id +
-                ", kind=" + kind +
-                ", volwassen=" + volwassen +
+                ", kind=" + kinderen +
+                ", volwassen=" + volwassenen +
                 ", grootte='" + grootte + '\'' +
                 '}';
     }

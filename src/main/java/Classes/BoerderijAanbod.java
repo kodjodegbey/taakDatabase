@@ -1,42 +1,19 @@
 package Classes;
 
 public class BoerderijAanbod {
-
-    private int contract_id,prijs,boerderij_id,pakket_id;
+    private  String grootte,naam;
+    private int volwassenen,kinderen,prijs,pakket_id;
 
     public BoerderijAanbod() {
-
     }
 
-    public BoerderijAanbod(int contract_id, int prijs, int boerderij_id, int pakket_id) {
-        this.contract_id = contract_id;
+    public BoerderijAanbod(String grootte, String naam, int volwassenen, int kinderen, int prijs,int pakket_id) {
+        this.grootte = grootte;
+        this.naam = naam;
+        this.volwassenen = volwassenen;
+        this.kinderen = kinderen;
         this.prijs = prijs;
-        this.boerderij_id = boerderij_id;
         this.pakket_id = pakket_id;
-    }
-
-    public int getContract_id() {
-        return contract_id;
-    }
-
-    public void setContract_id(int contract_id) {
-        this.contract_id = contract_id;
-    }
-
-    public int getPrijs() {
-        return prijs;
-    }
-
-    public void setPrijs(int prijs) {
-        this.prijs = prijs;
-    }
-
-    public int getBoerderij_id() {
-        return boerderij_id;
-    }
-
-    public void setBoerderij_id(int boerderij_id) {
-        this.boerderij_id = boerderij_id;
     }
 
     public int getPakket_id() {
@@ -47,12 +24,54 @@ public class BoerderijAanbod {
         this.pakket_id = pakket_id;
     }
 
+    public String getGrootte() {
+        return grootte;
+    }
+
+    public void setGrootte(String grootte) {
+        this.grootte = grootte;
+    }
+
+    public String getNaam() {
+        return naam;
+    }
+
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public int getVolwassenen() {
+        return volwassenen;
+    }
+
+    public void setVolwassenen(int volwassenen) {
+        this.volwassenen = volwassenen;
+    }
+
+    public int getKinderen() {
+        return kinderen;
+    }
+
+    public void setKinderen(int kinderen) {
+        this.kinderen = kinderen;
+    }
+
+    public int getPrijs() {
+        return prijs;
+    }
+
+    public void setPrijs(int prijs) {
+        this.prijs = prijs;
+    }
+
     @Override
     public String toString() {
         return "BoerderijAanbod{" +
-                "contract_id=" + contract_id +
+                "grootte='" + grootte + '\'' +
+                ", naam='" + naam + '\'' +
+                ", volwassenen=" + volwassenen +
+                ", kinderen=" + kinderen +
                 ", prijs=" + prijs +
-                ", boerderij_id=" + boerderij_id +
                 ", pakket_id=" + pakket_id +
                 '}';
     }
