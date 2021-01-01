@@ -56,12 +56,32 @@ public class TestJDBI {
 
     @Test
     public void test_Inschrijvingen(){
-        ArrayList<Inschrijving> Inschrijvingen = (ArrayList<Inschrijving>) db.getInshrijvin();
+        ArrayList<Inschrijving> Inschrijvingen = (ArrayList<Inschrijving>) db.getInshrijving();
         Assert.assertTrue("der zijn geen producten", Inschrijvingen.size() == 0);
         for (Inschrijving b : Inschrijvingen) {
             System.out.println(b.toString());
         }
     }
+    @Test
+    public void test_updateKlant(){
+        db.updatKlant(new Klant("53","63","pot","jos",
+                "straat0",20,20,10,false,5,"email0"));
+    }
+
+    @Test
+    public void test_voegklantToe(){
+        var klant =new Klant("54","63","pot","jos",
+                "straat0",20,20,10,false,1,"email0");
+        db.voegklantToe(klant);
+    }
+
+//    @Test
+//    public void verwijder_Boerderij(){
+//        Boerderij boerderij = new Boerderij(7,"boer6","staat6",6,6,"email6");
+//        db.verwijderBoerderijTransaction(boerderij);
+//        Boerderij controle ;
+//        db.
+//    }
 
 
 
