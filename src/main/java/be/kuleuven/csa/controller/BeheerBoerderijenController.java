@@ -1,13 +1,16 @@
 package be.kuleuven.csa.controller;
 
+import be.kuleuven.csa.ProjectMain;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
 
 public class BeheerBoerderijenController {
 
@@ -60,6 +63,20 @@ public class BeheerBoerderijenController {
     }
 
     private void addNewRow() {
+        var resourceName = "addupdateboerderij" + ".fxml";
+        try {
+            var stage = new Stage();
+            var root = (AnchorPane) FXMLLoader.load(getClass().getClassLoader().getResource(resourceName));
+            var scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Beheer van ");
+            stage.initOwner(ProjectMain.getRootStage());
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.show();
+
+        } catch (Exception e) {
+            throw new RuntimeException("Kan beheerscherm " + resourceName + " niet vinden", e);
+        }
     }
 
     private void deleteCurrentRow() {
