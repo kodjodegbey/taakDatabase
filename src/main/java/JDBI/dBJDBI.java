@@ -15,20 +15,6 @@ public class dBJDBI {
         jdbi =Jdbi.create(connectionString);
     }
 
-//    public  void maakDataBase(){
-//        String sql = "CREATE TABLE \"Tip\" (\n" +
-//                "\t\"tip_id\"\tINTEGER NOT NULL UNIQUE,\n" +
-//                "\t\"naam\"\tTEXT NOT NULL,\n" +
-//                "\t\"tekst\"\tTEXT NOT NULL,\n" +
-//                "\tPRIMARY KEY(\"tip_id\" AUTOINCREMENT),\n" +
-//                "\tFOREIGN KEY(\"naam\") REFERENCES \"Product\"(\"naam\")\n" +
-//                ");";
-//        System.out.println(sql);
-//        jdbi.useHandle(handle -> {
-//            handle.execute(sql);
-//        });
-//    }
-
     public List<Klant> getKlanten(){
             ArrayList<Klant> klanten ;
     klanten = (ArrayList<Klant>) jdbi.withHandle(handle -> {
@@ -39,7 +25,7 @@ public class dBJDBI {
             });
     return klanten;
 }
-
+//todo fix de eamil
     public List<Boerderij> getBoerderijen(){
         ArrayList<Boerderij> boerderijen ;
         boerderijen = (ArrayList<Boerderij>) jdbi.withHandle(handle -> {
@@ -48,6 +34,29 @@ public class dBJDBI {
                     .list();
         });
         return boerderijen;
+    }
+
+    public void voegBoerderijToe(Boerderij boerderij){
+        String sql = "insert into Boerderij(naam,straat,nummer,postcode,email)" +
+                "VALUES ('" + boerderij.getNaam() + "', '" + boerderij.getStraat() + "', " + boerderij.getNummer() + ", " +
+                boerderij.getPostcode() + ",'"+  boerderij.getEmails() +   "')";
+        System.out.println(sql);
+        jdbi.useHandle(handle -> {
+            handle.execute(sql);
+        });
+    }
+
+    public void upDate_boerdrij(Boerderij boerderij){
+        String sql = "update Boerderij set naam = '" +boerderij.getNaam()+ "',straat = '" + boerderij.getStraat() +
+                "',nummer =" + boerderij.getNummer() +",postcode = "+boerderij.getNummer() +
+                ",email = '" +boerderij.getEmails()+"' where boerderij_id = "+ boerderij.getBoerderij_id();
+        System.out.println(sql);
+        jdbi.useHandle(handle -> {
+            handle.execute(sql);
+        });
+    }
+    public void verwijder_boerderij(Boerderij boerderij){
+
     }
 
     public List<Product> getProducten(){
@@ -96,6 +105,9 @@ public class dBJDBI {
         });
         return boerderijen;
     }
+
+
+
 
 //todo weet ik nog niet hoe ik dit moet oplossen maar
     public List<Tip> getTips(){

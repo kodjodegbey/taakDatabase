@@ -1,0 +1,6 @@
+NBoerderij{naam=' boer1', straat='straat1', nummer=1, postcode=1, email=null}
+NBoerderij{naam=' boer2', straat='straat2', nummer=2, postcode=2, email=null}
+NBoerderij{naam=' boer3', straat='straat3', nummer=3, postcode=3, email=null}
+NBoerderij{naam=' boer4', straat='straat4', nummer=4, postcode=4, email=null}
+QBoerderij{naam=' boer5', straat='straat0', nummer=0, postcode=2200, email=null}
+NBoerderij{naam='boer 6', straat='straat6', nummer=0, postcode=0, email=null}
