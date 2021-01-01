@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="361.0" prefWidth="303.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.kuleuven.csa.controller.AddUpdateBoerderijController">
+    <children>
+        <Text fx:id="titel" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voeg/bewerk boerderij" wrappingWidth="255.0">
+            <font>
+                <Font name="System Bold Italic" size="13.0" />
+            </font>
+        </Text>
+        <Button fx:id="btnconfirm" layoutX="36.0" layoutY="316.0" mnemonicParsing="false" text="voeg toe/bewerk" />
+        <Button fx:id="btnClose" layoutX="192.0" layoutY="316.0" mnemonicParsing="false" text="Sluiten" />
+      <TextField fx:id="textNaam" layoutX="50.0" layoutY="70.0" prefHeight="25.0" prefWidth="195.0" promptText="naam" />
+      <TextField fx:id="textEmail" layoutX="50.0" layoutY="120.0" prefHeight="25.0" prefWidth="195.0" promptText="email" />
+      <TextField fx:id="textStraat" layoutX="50.0" layoutY="170.0" prefHeight="25.0" prefWidth="195.0" promptText="straat" />
+      <TextField fx:id="textHuisnummer" layoutX="50.0" layoutY="220.0" prefHeight="25.0" prefWidth="195.0" promptText="huisnummer" />
+      <TextField fx:id="testPostcode" layoutX="50.0" layoutY="270.0" prefHeight="25.0" prefWidth="195.0" promptText="postcode" />
+    </children>
+</AnchorPane>

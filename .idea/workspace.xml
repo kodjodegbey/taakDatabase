@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f8bf6453-5801-4780-9db1-3db587b557d8" name="Default Changelist" comment="iets">
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/CSA2.db" beforeDir="false" afterPath="$PROJECT_DIR$/CSA2.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/JDBI/dBJDBI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/JDBI/dBJDBI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/testMain/TestMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/testMain/TestMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JDBI/dBJDBI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JDBI/dBJDBI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/testMain/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testMain/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestJDBI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestJDBI.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/csa/controller/BeheerBoerderijenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/csa/controller/BeheerBoerderijenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/csamain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csamain.fxml" afterDir="false" />
+>>>>>>> bdfb745be4cc957721d4c6c4d95d790baa469972
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +51,9 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="taakDatabase">
           <activation />
         </task>
         <projects_view>
@@ -90,7 +103,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -98,19 +110,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="be.kuleuven.csa.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Github\taakDatabase\src\main\resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
@@ -119,7 +132,11 @@
       <command value="gradle run" />
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.TestMain">
+=======
+  <component name="RunManager" selected="Gradle.taakDatabase [run]">
+>>>>>>> bdfb745be4cc957721d4c6c4d95d790baa469972
     <configuration name="ProjectMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.kuleuven.csa.ProjectMain" />
       <module name="project-template.main" />
@@ -186,27 +203,7 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestJDBI.test_getPaketten" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestJDBI.test_getPaketten&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestJDBI.test_get_all_boerderij" type="GradleRunConfiguration" factoryName="Gradle">
+    <configuration name="TestJDBI.test_get_all_boerderij" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -224,6 +221,29 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+<<<<<<< HEAD
+    <configuration name="TestJDBI.test_get_all_boerderij" type="GradleRunConfiguration" factoryName="Gradle">
+=======
+    <configuration name="taakDatabase [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+>>>>>>> bdfb745be4cc957721d4c6c4d95d790baa469972
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="taakDatabase [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
@@ -249,6 +269,11 @@
       <item itemvalue="Application.TestMain" />
       <item itemvalue="Application.ProjectMain" />
       <item itemvalue="Gradle.taakDatabase [run]" />
+<<<<<<< HEAD
+=======
+      <item itemvalue="Gradle.TestJDBI.test_Inschrijvingen" />
+      <item itemvalue="Gradle.TestJDBI.test_getAanbod" />
+>>>>>>> bdfb745be4cc957721d4c6c4d95d790baa469972
       <item itemvalue="Gradle.TestJDBI.test_get_all_boerderij" />
       <item itemvalue="Gradle.TestJDBI.test_Inschrijvingen" />
       <item itemvalue="Gradle.TestJDBI.test_getAanbod" />
@@ -257,25 +282,17 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProjectMain" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Gradle.TestJDBI.test_get_all_boerderij" />
+>>>>>>> bdfb745be4cc957721d4c6c4d95d790baa469972
         <item itemvalue="Gradle.TestJDBI.test_getAanbod" />
         <item itemvalue="Application.TestMain" />
         <item itemvalue="Gradle.TestJDBI.test_Inschrijvingen" />
-        <item itemvalue="Gradle.TestJDBI.test_getPaketten" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -310,10 +327,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="485" y="128" key="#ProjectMain/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609346216101" />
+<<<<<<< HEAD
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609517622302">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609517622302" />
+=======
+    <state x="279" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609517542244">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609346438969" />
+    <state x="279" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1609517542244" />
+>>>>>>> bdfb745be4cc957721d4c6c4d95d790baa469972
     <state x="486" y="276" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609443426124">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -339,6 +364,7 @@
       <screen x="1440" y="23" width="1920" height="1053" />
     </state>
     <state x="2273" y="263" width="729" height="573" key="#xdebugger.evaluate/1440.23.1920.1053/0.23.1440.877@1440.23.1920.1053" timestamp="1604572497531" />
+<<<<<<< HEAD
     <state x="141" y="26" key="CommitChangelistDialog2" timestamp="1609515478685">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -369,6 +395,43 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1492" height="297" key="GridCell.Tab.0.right/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609531681317" />
+=======
+    <state x="843" y="232" key="FileChooserDialogImpl" timestamp="1609517322321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="674" y="193" key="FileChooserDialogImpl/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609428035711" />
+    <state x="843" y="232" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1609517322321" />
+    <state width="1877" height="148" key="GridCell.Tab.0.bottom" timestamp="1609522576263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1492" height="203" key="GridCell.Tab.0.bottom/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609515366765" />
+    <state width="1877" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1609522576263" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1609522383128" />
+    <state width="1878" height="356" key="GridCell.Tab.0.bottom/1440.23.1920.1053/0.23.1440.877@1440.23.1920.1053" timestamp="1604573785520" />
+    <state width="1878" height="288" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.873@1440.23.1920.1057" timestamp="1604567232654" />
+    <state width="1877" height="148" key="GridCell.Tab.0.center" timestamp="1609522576263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1492" height="203" key="GridCell.Tab.0.center/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609515366765" />
+    <state width="1877" height="148" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1609522576263" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1609522383128" />
+    <state width="1878" height="356" key="GridCell.Tab.0.center/1440.23.1920.1053/0.23.1440.877@1440.23.1920.1053" timestamp="1604573785518" />
+    <state width="1878" height="288" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.873@1440.23.1920.1057" timestamp="1604567232653" />
+    <state width="1877" height="148" key="GridCell.Tab.0.left" timestamp="1609522576263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1492" height="203" key="GridCell.Tab.0.left/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609515366765" />
+    <state width="1877" height="148" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1609522576263" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1609522383127" />
+    <state width="1878" height="356" key="GridCell.Tab.0.left/1440.23.1920.1053/0.23.1440.877@1440.23.1920.1053" timestamp="1604573785517" />
+    <state width="1878" height="288" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.873@1440.23.1920.1057" timestamp="1604567232653" />
+    <state width="1877" height="148" key="GridCell.Tab.0.right" timestamp="1609522576263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1492" height="203" key="GridCell.Tab.0.right/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609515366765" />
+    <state width="1877" height="148" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1609522576263" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1609522383128" />
+>>>>>>> bdfb745be4cc957721d4c6c4d95d790baa469972
     <state width="1878" height="356" key="GridCell.Tab.0.right/1440.23.1920.1053/0.23.1440.877@1440.23.1920.1053" timestamp="1604573785519" />
     <state width="1878" height="288" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.873@1440.23.1920.1057" timestamp="1604567232654" />
     <state width="1492" height="85" key="GridCell.Tab.1.bottom" timestamp="1609525080895">
@@ -391,10 +454,11 @@
     </state>
     <state width="1492" height="85" key="GridCell.Tab.1.right/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609525080895" />
     <state width="1878" height="356" key="GridCell.Tab.1.right/1440.23.1920.1053/0.23.1440.877@1440.23.1920.1053" timestamp="1604573785522" />
-    <state x="139" y="0" key="SettingsEditor" timestamp="1609346174549">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="174" y="0" key="SettingsEditor" timestamp="1609522567351">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="139" y="0" key="SettingsEditor/0.0.1536.864/-1366.0.1366.768/1920.0.1920.1080@0.0.1536.864" timestamp="1609346174549" />
+    <state x="174" y="0" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1609522567351" />
     <state x="1909" y="188" key="SettingsEditor/1440.23.1920.1057/0.23.1440.873@1440.23.1920.1057" timestamp="1604566801549" />
     <state x="500" y="190" width="672" height="552" key="run.anything.popup" timestamp="1609517362018">
       <screen x="0" y="0" width="1536" height="864" />
