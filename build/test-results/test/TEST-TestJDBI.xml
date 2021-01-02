@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestJDBI" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-01T15:36:08" hostname="HP-ALEX" time="0.475">
+<testsuite name="TestJDBI" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-02T00:06:39" hostname="HP-ALEX" time="0.635">
   <properties/>
-  <testcase name="test_get_all_boerderij" classname="TestJDBI" time="0.475"/>
-  <system-out><![CDATA[Boerderij{naam=' boer1', straat='straat1', nummer=1, postcode=1, email=null}
-Boerderij{naam=' boer2', straat='straat2', nummer=2, postcode=2, email=null}
-Boerderij{naam=' boer3', straat='straat3', nummer=3, postcode=3, email=null}
-Boerderij{naam=' boer4', straat='straat4', nummer=4, postcode=4, email=null}
-Boerderij{naam=' boer5', straat='straat0', nummer=0, postcode=2200, email=null}
-Boerderij{naam='boer 6', straat='straat6', nummer=0, postcode=0, email=null}
+  <testcase name="test_getKlanten" classname="TestJDBI" time="0.635"/>
+  <system-out><![CDATA[Klant{rijksregister='50', gsm_nummer='20', naam='pot', voornaam='joqj', straat='straat0', postcode=10, nummer=50, week=60, afgehaal=false, contract_id=2, email='email0'}
+Klant{rijksregister='54', gsm_nummer='63', naam='pot', voornaam='jos', straat='straat0', postcode=20, nummer=20, week=10, afgehaal=false, contract_id=5, email='email0'}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

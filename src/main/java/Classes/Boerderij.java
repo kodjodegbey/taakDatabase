@@ -25,10 +25,9 @@ public class Boerderij {
         return email;
     }
 
-    public void setEmails(String emails) {
-        this.email = emails;
+    public void setEmail(String email) {
+        this.email = email;
     }
-
 
     public String getNaam() {
         return naam;

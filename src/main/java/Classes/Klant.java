@@ -89,11 +89,11 @@ public class Klant {
         this.week = week;
     }
 
-    public String getEmails() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmails(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
