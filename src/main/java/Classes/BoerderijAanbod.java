@@ -3,27 +3,17 @@ package Classes;
 public class BoerderijAanbod {
     private  String grootte,naam;
     private int volwassenen,kinderen,prijs,pakket_id;
-    private int boerderij_id;
 
     public BoerderijAanbod() {
     }
 
-    public BoerderijAanbod(String grootte, String naam, int volwassenen, int kinderen, int prijs,int pakket_id,int boerderij_id) {
+    public BoerderijAanbod(String grootte, String naam, int volwassenen, int kinderen, int prijs,int pakket_id) {
         this.grootte = grootte;
         this.naam = naam;
         this.volwassenen = volwassenen;
         this.kinderen = kinderen;
         this.prijs = prijs;
         this.pakket_id = pakket_id;
-        this.boerderij_id = boerderij_id;
-    }
-
-    public int getBoerderij_id() {
-        return boerderij_id;
-    }
-
-    public void setBoerderij_id(int boerderij_id) {
-        this.boerderij_id = boerderij_id;
     }
 
     public int getPakket_id() {

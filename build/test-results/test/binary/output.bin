@@ -1,2 +1,6 @@
-«Klant{rijksregister='50', gsm_nummer='20', naam='pot', voornaam='joqj', straat='straat0', postcode=10, nummer=50, week=60, afgehaal=false, contract_id=2, email='email0'}
-ªKlant{rijksregister='54', gsm_nummer='63', naam='pot', voornaam='jos', straat='straat0', postcode=20, nummer=20, week=10, afgehaal=false, contract_id=5, email='email0'}
+NBoerderij{naam=' boer1', straat='straat1', nummer=1, postcode=1, email=null}
+NBoerderij{naam=' boer2', straat='straat2', nummer=2, postcode=2, email=null}
+NBoerderij{naam=' boer3', straat='straat3', nummer=3, postcode=3, email=null}
+NBoerderij{naam=' boer4', straat='straat4', nummer=4, postcode=4, email=null}
+QBoerderij{naam=' boer5', straat='straat0', nummer=0, postcode=2200, email=null}
+NBoerderij{naam='boer 6', straat='straat6', nummer=0, postcode=0, email=null}

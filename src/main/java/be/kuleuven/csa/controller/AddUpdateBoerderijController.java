@@ -1,5 +1,6 @@
 package be.kuleuven.csa.controller;
 
+import Classes.Boerderij;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -41,6 +42,15 @@ public class AddUpdateBoerderijController {
     @FXML
     private TextField testPostcode;
 
+    private boolean addModifyEnable;
+
+    private Boerderij selectedBoerderij;
+
+    // neemt de data van BeheerBoerderijen scene
+    public void initData(Boerderij boerderij) {
+        selectedBoerderij = boerderij;
+        textNaam.setText(selectedBoerderij.getNaam());
+    }
     @FXML
     void initialize() {
         assert titel != null : "fx:id=\"titel\" was not injected: check your FXML file 'addupdateboerderij.fxml'.";
@@ -57,5 +67,11 @@ public class AddUpdateBoerderijController {
             var stage = (Stage) btnClose.getScene().getWindow();
             stage.close();
         });
+    }
+
+    private void sendDataToDB(){
+        //when clicked on confirm
+        //send data to db
+        //close the scene
     }
 }
