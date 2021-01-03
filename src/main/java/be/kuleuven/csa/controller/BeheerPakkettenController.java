@@ -43,15 +43,17 @@ public class BeheerPakkettenController {
     @FXML
     private Button btnRefresh;
 
+    @FXML
+    private ChoiceBox<String> cgrootte;
 
     public TableView tblPakketten;
     private ArrayList<Pakket> pakketten;
     //dBJDBI db;
 
     public void initialize() {
-        //db = new dBJDBI("jdbc:sqlite:CSA2.db");
         pakketten = new ArrayList<>();
         initTable();
+        keuzeGrootte();
 
         btnAdd.setOnAction(e -> {
                 addNewRow();
@@ -80,6 +82,14 @@ public class BeheerPakkettenController {
         btnRefresh.setOnAction(e -> {
             initTable();
         });
+
+    }
+
+    private void keuzeGrootte(){
+        ObservableList list = FXCollections.observableArrayList();
+        list.removeAll();
+        list.addAll("XS","S", "M", "L", "XL");
+        cgrootte.getItems().addAll(list);
     }
 
     private void initTable() {
@@ -108,7 +118,7 @@ public class BeheerPakkettenController {
 
     private void addNewRow() {
         try {
-            ProjectMainController.db.voegPakketToe(pgrootte.getText());
+            ProjectMainController.db.voegPakketToe(cgrootte.getValue());
         } catch(Exception e) {
             showAlert("null waarden", "vergeet niet de pakketgrootte in te vullen aub");
         }
@@ -118,7 +128,7 @@ public class BeheerPakkettenController {
         try {
             Object selectedItems = tblPakketten.getSelectionModel().getSelectedItems().get(0);
             String pakketID = selectedItems.toString().split(",")[0].substring(1);
-            ProjectMainController.db.upDataPakket(Integer.valueOf(pakketID), pgrootte.getText());
+            ProjectMainController.db.upDataPakket(Integer.valueOf(pakketID), cgrootte.getValue());
         } catch(Exception e) {
             showAlert("onjuiste waarden", "vul een correcte grootte in");
         }

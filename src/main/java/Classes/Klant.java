@@ -11,7 +11,7 @@ public class Klant {
     }
 
     public Klant(String rijksregister, String gsm_nummer, String naam, String voornaam, String straat,
-                 int postcode, int nummer, int week, boolean afgehaald, int contract_id, String email) {
+                 int postcode, int nummer, int week, boolean afgehaal, int contract_id, String email) {
         this.rijksregister = rijksregister;
         this.gsm_nummer = gsm_nummer;
         this.naam = naam;
@@ -20,7 +20,7 @@ public class Klant {
         this.postcode = postcode;
         this.nummer = nummer;
         this.week = week;
-        this.afgehaal = afgehaald;
+        this.afgehaal = afgehaal;
         this.contract_id = contract_id;
         this.email = email;
     }
@@ -89,11 +89,11 @@ public class Klant {
         this.week = week;
     }
 
-    public String getEmails() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmails(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 

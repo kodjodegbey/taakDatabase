@@ -16,16 +16,16 @@ public class dBJDBI {
     }
 
     public List<Klant> getKlanten(){
-            ArrayList<Klant> klanten ;
-    klanten = (ArrayList<Klant>) jdbi.withHandle(handle -> {
+        ArrayList<Klant> klanten ;
+        klanten = (ArrayList<Klant>) jdbi.withHandle(handle -> {
 
-        return handle.createQuery("SELECT * from Klant ")
-                .mapToBean(Klant.class)
-                .list();
-            });
-    return klanten;
-}
-
+            return handle.createQuery("SELECT * from Klant ")
+                    .mapToBean(Klant.class)
+                    .list();
+        });
+        return klanten;
+    }
+    // verwijder inschrijving
     public void verwijderKlanten(String rijksregister){
         String sql ="DELETE from klant where rijksregister = "+rijksregister;
         System.out.println(sql);
@@ -39,7 +39,7 @@ public class dBJDBI {
         String sql = "update Klant set naam = '" +klant.getNaam()+ "',straat = '" + klant.getStraat() +
                 "',voornaam='"+klant.getVoornaam()+"',"+"gsm_nummer='"+klant.getGsm_nummer()+"',"+"week="+klant.getWeek()+
                 ",nummer =" + klant.getNummer() +",postcode = "+klant.getPostcode() + ",afgehaald="+haalaf+
-                ",email = '" +klant.getEmails()+"' where rijksregister = "+ klant.getRijksregister();
+                ",email = '" +klant.getEmail()+"' where rijksregister = "+ klant.getRijksregister();
         System.out.println(sql);
         jdbi.useHandle(handle -> {
             handle.execute(sql);
@@ -51,14 +51,14 @@ public class dBJDBI {
         var sql ="INSERT into Klant (rijksregister,gsm_nummer,naam,voornaam,nummer,postcode,straat,afgehaald,week,contract_id,email)\n" +
                 "values('"+klant.getRijksregister() +"','"+klant.getGsm_nummer()+"','" + klant.getNaam() +"','"+klant.getVoornaam()+
                 "'," + klant.getNummer()+","+ klant.getPostcode()+",'"+klant.getStraat()+"',"+haalaf+","+klant.getWeek()+"," +
-                klant.getContract_id()+",'"+klant.getEmails()+"')";
+                klant.getContract_id()+",'"+klant.getEmail()+"')";
         System.out.println(sql);
         jdbi.useHandle(handle -> {
             handle.execute(sql);
         });
     }
 
-//todo fix de eamil
+    //todo fix de eamil
     public List<Boerderij> getBoerderijen(){
         ArrayList<Boerderij> boerderijen ;
         boerderijen = (ArrayList<Boerderij>) jdbi.withHandle(handle -> {
@@ -89,7 +89,7 @@ public class dBJDBI {
         });
     }
 
-     public void verwijderBoerderijTransaction(Boerderij boerderij){
+    public void verwijderBoerderijTransaction(Boerderij boerderij){
         String verwijderSamenstelling = "delete from Samenstelling where contract_id = \n" +
                 "(SELECT Biedt_aan.contract_id from Biedt_aan \n" +
                 "where Biedt_aan.boerderij_id = "+ boerderij.getBoerderij_id() +")" ;
@@ -167,13 +167,13 @@ public class dBJDBI {
     public void voegPakketToe(String grootte){
         int kinderen = -1 ;
         int volwassenen= -1;
-       grootte = grootte.toLowerCase();
+        grootte = grootte.toLowerCase();
         switch (grootte){
             case "xl":
                 kinderen = 5;
                 volwassenen = 5 ;
                 System.out.println("je heb een XL pakket");
-               break;
+                break;
             case"l":
                 kinderen = 4;
                 volwassenen = 4 ;
@@ -208,7 +208,7 @@ public class dBJDBI {
             });
         }
     }
-
+    // todo  eerst bied aan weg dan pakker weg kijken of het verbond is aan een klant
     public void verwijderPakket(int pakket_id){
         String sql =" delete from Pakket where Pakket.pakket_id =" +pakket_id;
         System.out.println(sql);
@@ -276,16 +276,72 @@ public class dBJDBI {
         return boerderijen;
     }
 
-    public void updateInschrijving(String rijksregister,Boerderij boerderij,Pakket pakket ){
+    public void updateInschrijving(String rijksregister,int contract_id ){
 
-       String sql= "UPDATE Biedt_aan set boerderij_id = 3,pakket_id = 8 where Biedt_aan.contract_id = "+
-               " (select Klant.contract_id from Klant where Klant.rijksregister = 54)";
+        String sql= "update Klant set contract_id = "+contract_id+" WHERE\n" +
+                "Klant.rijksregister ='"+rijksregister+"'";
 
         System.out.println(sql);
         jdbi.useHandle(handle -> {
             handle.execute(sql);
         });
     }
+
+    public ArrayList<ContractEnPrijs> beschikbaarContracten(String size){
+        ArrayList<Integer> listPakket_id;
+        size = size.toUpperCase();
+        String selectPakket = "select Pakket.pakket_id from Pakket where \n" +
+                "Pakket.grootte ='"+size+"'";
+        System.out.println(selectPakket);
+        listPakket_id = (ArrayList<Integer>) jdbi.withHandle(handle -> {
+            return handle.createQuery(selectPakket)
+                    .mapTo(Integer.class)
+                    .list();
+        });
+        List<ContractEnPrijs> listcontract = new ArrayList<>();
+        for (int i =0;i<listPakket_id.size();i++) {
+            System.out.println(listPakket_id.get(i));
+            String selectContract = "select Biedt_aan.contract_id from Biedt_aan \n" +
+                    "where Biedt_aan.pakket_id ="+listPakket_id.get(i);
+            System.out.println(selectContract);
+            ContractEnPrijs cp =  jdbi.withHandle(handle -> handle.createQuery(selectContract)
+                    .mapToBean(ContractEnPrijs.class)
+                    .first());
+            if(cp.getPrijs()>-1){
+                listcontract.add(cp);
+            }
+        }
+        for(ContractEnPrijs c: listcontract){
+            System.out.println(c.toString());
+        }
+        ArrayList<Integer> klantcontract_id ;
+        String selectContractklant = "select Klant.contract_id from Klant ";
+        System.out.println(selectContractklant);
+        klantcontract_id = (ArrayList<Integer>) jdbi.withHandle(handle -> {
+            return handle.createQuery(selectContractklant)
+                    .mapTo(Integer.class)
+                    .list();
+        });
+        for (int i =0;i<klantcontract_id.size();i++) {
+            System.out.println(klantcontract_id.get(i));
+        }
+        for (int i = 0; i < listcontract.size() ; i++) {
+            if(klantcontract_id.contains(listcontract.get(i).getContract_id())){
+                listcontract.remove(listcontract.get(i));
+                i--;
+            }
+
+        }
+
+        System.out.println("die zijn de beschikbaar contracten");
+        for(ContractEnPrijs c: listcontract){
+            System.out.println(c.toString());
+        }
+
+        return (ArrayList<ContractEnPrijs>) listcontract;
+    }
+
+    // niewschrijvin geef groote in en zoek beschikbaar contracten maar een nieuw klant met die contract
 
 
     public List<BoerderijAanbod> getBoerderijAanbod(){
@@ -302,10 +358,80 @@ public class dBJDBI {
         return boerderijen;
     }
 
+    public  void maakAanbod(int pakket_id,int boederij_id,int prijs){
+        String sql = "INSERT into Biedt_aan(prijs,boerderij_id,pakket_id)\n" +
+                "values("+prijs+","+boederij_id+","+pakket_id+")";
+        jdbi.useHandle(handle -> {
+            handle.execute(sql);
+        });
+    }
+
+    public ArrayList<Integer> beschikbaarPakkettenVoorAanbod(){
+        String selecteerPaketId = "SELECT Pakket.pakket_id from Pakket";
+        ArrayList<Integer> pakketIds ;
+        pakketIds = (ArrayList<Integer>) jdbi.withHandle(handle -> {
+            return handle.createQuery(selecteerPaketId)
+                    .mapTo(Integer.class)
+                    .list();
+        });
+        for (int i = 0; i < pakketIds.size(); i++) {
+            System.out.println(pakketIds.get(i));
+        }
+        String selecteerPaketIdBiedaan = "SELECT Biedt_aan.pakket_id from Biedt_aan";
+        ArrayList<Integer> pakketIdsBiedaan ;
+        pakketIdsBiedaan = (ArrayList<Integer>) jdbi.withHandle(handle -> {
+            return handle.createQuery(selecteerPaketIdBiedaan)
+                    .mapTo(Integer.class)
+                    .list();
+        });
+        for (int i = 0; i < pakketIdsBiedaan.size(); i++) {
+            System.out.println(pakketIdsBiedaan.get(i));
+        }
+        for (int i = 0; i <pakketIds.size() ; i++) {
+            if(pakketIdsBiedaan.contains(pakketIds.get(i))){
+                pakketIds.remove(pakketIds.get(i));
+                i--;
+            }
+        }
+        System.out.println("die is de uitkomst");
+        for (int i = 0; i < pakketIds.size(); i++) {
+            System.out.println(pakketIds.get(i));
+        }
+        return pakketIds;
+    }
+
+    public void updateAanbod(int boerderij_id,int prijs,String grootte,int pakket_id){
+        upDataPakket(pakket_id,grootte);
+        String updateBiedAan = "UPDATE Biedt_aan set prijs ="+ prijs+ " where Biedt_aan.boerderij_id ="+boerderij_id;
+        jdbi.useHandle(handle -> {
+            handle.execute(updateBiedAan);
+        });
+    }
+
+    public ArrayList<Integer> getPakket_id_VanBoerderij(int boerderij_id){
+        ArrayList<Integer> pakketIds;
+        String sql = "SELECT Biedt_aan.pakket_id from Biedt_aan where Biedt_aan.boerderij_id ="+boerderij_id;
+        pakketIds= (ArrayList<Integer>) jdbi.withHandle(handle -> {
+            return handle.createQuery(sql)
+                    .mapTo(Integer.class)
+                    .list();
+        });
+        for (int i = 0; i < pakketIds.size(); i++) {
+            System.out.println(pakketIds.get(i));
+        }
+        return pakketIds;
+    }
+    //todo kijken of de contract id bij een klant hoort zo niet bied aan weg dan pakker weg
+    public void verwijderAanbod(int boerderij_id,int pakket_id){
+        verwijderPakket(pakket_id);
+    }
 
 
 
-//todo weet ik nog niet hoe ik dit moet oplossen maar
+
+
+
+    //todo weet ik nog niet hoe ik dit moet oplossen maar
     public List<Tip> getTips(){
         ArrayList<Tip> boerderijen ;
         boerderijen = (ArrayList<Tip>) jdbi.withHandle(handle -> {

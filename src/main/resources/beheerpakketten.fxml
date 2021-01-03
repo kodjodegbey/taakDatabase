@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -26,8 +26,8 @@
         <Button fx:id="btnModify" layoutX="115.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Bewerk" />
         <Button fx:id="btnClose" layoutX="408.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Sluiten" />
         <Button fx:id="btnDelete" layoutX="209.0" layoutY="365.0" mnemonicParsing="false" text="Verwijder" />
-        <TextField fx:id="pgrootte" layoutX="15.0" layoutY="324.0" prefHeight="25.0" prefWidth="133.0" promptText="grootte" />
         <Button fx:id="btnRefresh" layoutX="306.0" layoutY="365.0" mnemonicParsing="false" text="REFRESH" />
-        <Label layoutX="15.0" layoutY="307.0" prefHeight="17.0" prefWidth="133.0" text="grootte (XS, S, M, L, XL)" />
+        <Label layoutX="15.0" layoutY="307.0" prefHeight="17.0" prefWidth="58.0" text="grootte" />
+      <ChoiceBox fx:id="cgrootte" layoutX="16.0" layoutY="324.0" prefHeight="25.0" prefWidth="58.0" />
     </children>
 </AnchorPane>
