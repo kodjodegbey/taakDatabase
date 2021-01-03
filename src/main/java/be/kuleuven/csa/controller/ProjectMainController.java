@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+import JDBI.dBJDBI;
 import java.io.IOException;
 
 public class ProjectMainController {
@@ -21,9 +21,15 @@ public class ProjectMainController {
     @FXML
     private Button btnKlanten;
     @FXML
+    private Button btnPakketten;
+    @FXML
     private Button btnInschrijvingen;
     @FXML
     private Button btnProducten;
+
+    // aangezien we eenzelfde database gebruiken, is het logisch als we dit een keer instantieren
+    // en een static final maken zodat we het overal kunnen gebruiken
+    public static final dBJDBI db = new dBJDBI("jdbc:sqlite:CSA2.db");
 
     public void initialize() {
         btnBoerderijen.setOnAction(e -> showBeheerScherm("boerderijen"));
@@ -31,6 +37,7 @@ public class ProjectMainController {
         btnKlanten.setOnAction(e -> showBeheerScherm("klanten"));
         btnInschrijvingen.setOnAction(e -> showBeheerScherm("inschrijvingen"));
         btnProducten.setOnAction(e -> showBeheerScherm("producten"));
+        btnPakketten.setOnAction(e -> showBeheerScherm("pakketten"));
     }
 
     private void showBeheerScherm(String id) {

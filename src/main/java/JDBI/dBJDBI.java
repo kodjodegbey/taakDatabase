@@ -81,7 +81,7 @@ public class dBJDBI {
 
     public void upDate_boerdrij(Boerderij boerderij){
         String sql = "update Boerderij set naam = '" +boerderij.getNaam()+ "',straat = '" + boerderij.getStraat() +
-                "',nummer =" + boerderij.getNummer() +",postcode = "+boerderij.getNummer() +
+                "',nummer =" + boerderij.getNummer() +",postcode = "+boerderij.getPostcode() +
                 ",email = '" +boerderij.getEmails()+"' where boerderij_id = "+ boerderij.getBoerderij_id();
         System.out.println(sql);
         jdbi.useHandle(handle -> {
